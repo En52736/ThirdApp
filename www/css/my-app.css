@@ -1,0 +1,89 @@
+.root{
+	background:url(../img/Zic.png) no-repeat center top;
+	position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;
+}
+#root{ -webkit-animation:fadeout 3s; animation:fadeout 3s }
+@-webkit-keyframes fadeout { from {opacity:1} to {opacity:0} }
+@keyframes fadeout { from {opacity:1} to {opacity:0}
+}
+.left{
+	margin-left: 25px;
+}
+
+.icon-refresh {
+	background: url(../img/icon-reload.png) no-repeat center;
+	width: 25px;
+	height: 25px;
+	background-size: 25px auto;
+}
+.refresh-link.refreshing .icon-refresh {
+	-webkit-animation-name: rotate;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: rotate;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	animation-name: rotate;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-moz-keyframes rotate {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+#slideout {
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  color: #333;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: -970px;
+  height: 1030px;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+#slideout form {
+  display: ;
+  padding: 20px;
+}
+#slideout textarea {
+  display: block;
+  height: 100px;
+  margin-left: 6px;
+  width: 250px;
+}
+#slideout.on {
+  bottom: 0;
+}

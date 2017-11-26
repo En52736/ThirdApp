@@ -1,0 +1,22 @@
+{
+  "name": "Zicbeat",
+  "displayName": "Zicbeat",
+  "version": "1.0.0",
+  "description": "Just A Simple Classic Music Player.",
+  "main": "process.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Doen C. Ancheta",
+  "license": "Apache-2.0",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  },
+  "dependencies": {
+    "cordova-plugin-whitelist": "1",
+    "react": "^15.6.2",
+    "react-timer-mixin": "^0.13.3"
+  }
+}
