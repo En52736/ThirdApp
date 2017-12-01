@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="en.music.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Zicbeat</name>
-    <description>Just A Simple Lassic Music Player</description>
+    <name>ZicBeat</name>
+    <description>Just A Simple Classic Music Player</description>
     <author email="doenca25@gmail.com" href="http://cordova.io">
         Weird_Pusha^_^!
     </author>

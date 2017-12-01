@@ -1,6 +1,6 @@
 {
-  "name": "Zicbeat",
-  "displayName": "Zicbeat",
+  "name": "ZicBeat",
+  "displayName": "ZicBeat",
   "version": "1.0.0",
   "description": "Just A Simple Classic Music Player.",
   "main": "process.js",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "cordova-plugin-whitelist": "1",
+    "jquery-touchswipe": "^1.6.18",
     "react": "^15.6.2",
     "react-timer-mixin": "^0.13.3"
   }
