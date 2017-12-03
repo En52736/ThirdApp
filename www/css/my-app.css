@@ -93,13 +93,6 @@
 	}
 }*/
 /*Bottom-Toolbar*/
-.left-right{
-	margin-left: 10px;
-	margin-right: 10px;
-}
-.right{
-	right: 10px;
-}
 .arrow-up{
 	background:url(../img/ic_keyboard_arrow_up_white_48dp.png) no-repeat center;
 	width: 30px;
@@ -140,9 +133,6 @@
 	right: 20px;
 }
 /*Bottom-Panel*/
-.container {
-  margin-top: 20px;
-}
 #slideout {
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
