@@ -1,14 +1,21 @@
+
+
 $('#button').click(function(){
   $('#slideout').toggleClass('on');
 });
 $('#button1').click(function(){
   $('#slideout').toggleClass('on');
 });
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(7000).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  checkTouchScreen();
+})
 
 $(document).ready(function() {
   (function(window, undefined) {
 
-    // 'use strict';
+    'use strict';
 
     var AudioPlayer = (function() {
 
@@ -21,6 +28,7 @@ $(document).ready(function() {
         // playSvgPath,
         prevBtn,
         nextBtn,
+        pauseBtn = document.getElementById('pausebtn'),
         // plBtn,
         repeatBtn,
         // volumeBtn,
@@ -59,7 +67,6 @@ $(document).ready(function() {
           '</div>' +
           '<div class="song_block pl-list__title">{title}</div>' +
         '</li>',
-        pauseBtn = document.getElementById('pause'),
         // settings
         settings = {
           volume: 1,
@@ -147,10 +154,10 @@ $(document).ready(function() {
           audio.play();
           // playBtn.classList.add('is-playing');
           $('#play_circle').removeClass('play-btn').addClass('pause-btn');
-          // $('#npAction').text(function(i, text) {
-          //   if (text === "PAUSED...") {
-          //     return "NOW PLAYING";
-          //   }})
+          $('#npAction').text(function(i, text) {
+            if (text === "PAUSED...") {
+              return "NOW PLAYING";
+            }})
           plLi[index].classList.add('pl-list--current');
           notify(playList[index].title, {
             icon: playList[index].icon,
@@ -194,11 +201,11 @@ $(document).ready(function() {
         preloadBar.style.width = 0;
         // playBtn.classList.remove('is-playing');
         $('#play_circle').addClass('play-btn').removeClass('pause-btn');
-        // $('#npAction').text(function(i, text) {
-        //   if (text === "NOW PLAYING") {
-        //     return "PAUSED...";
-        //   }
-        // })
+        $('#npAction').text(function(i, text) {
+          if (text === "NOW PLAYING") {
+            return "PAUSED...";
+          }
+        })
         // playSvgPath.setAttribute('d', playSvg.getAttribute('data-play'));
         plLi[index] && plLi[index].classList.remove('pl-list--current');
         changeDocumentTitle();
@@ -480,11 +487,11 @@ $(document).ready(function() {
       /**
        * TODO shuffle
        */
-      function shuffle() {
-        if (shuffle) {
-          index = Math.round(Math.random() * playList.length);
-        }
-      }
+      // function shuffle() {
+      //   if (shuffle) {
+      //     index = Math.round(Math.random() * playList.length);
+      //   }
+      // }
 
       function doEnd() {
         if (index === playList.length - 1) {
@@ -590,7 +597,7 @@ $(document).ready(function() {
 
         playBtn.removeEventListener('click', playToggle, false);
         volumeBtn.removeEventListener('click', volumeToggle, false);
-        // repeatBtn.removeEventListener('click', repeatToggle, false);
+        repeatBtn.removeEventListener('click', repeatToggle, false);
         plBtn.removeEventListener('click', plToggle, false);
 
         progressBar.closest('.progress-container').removeEventListener('mousedown', handlerBar, false);
@@ -829,11 +836,11 @@ $(document).ready(function() {
   });
 
   // (function() {
-  //   $('.back_btn').on('click', function() {
-  //     $('.player_playlist').toggleClass('playlist_on');
-  //     $('.glyphicon-menu-left').toggleClass('back_btn_on');
-  //     $('.waves').toggleClass('waves_up');
-  //     $('.album_wrap').toggleClass('album_up');
+  //    $('.back_btn').on('click', function() {
+  //      $('.player_playlist').toggleClass('playlist_on');
+  //      $('.glyphicon-menu-left').toggleClass('back_btn_on');
+  //      $('.waves').toggleClass('waves_up');
+  //      $('.album_wrap').toggleClass('album_up');
   //     $('.song_playing').toggleClass('song_playing_up');
   //     $('.timeline_wrap').toggleClass('timeline_wrap_up');
   //     $('.player_btns').toggleClass('player_btns_up');
@@ -842,7 +849,7 @@ $(document).ready(function() {
   //     $('.time_of_song').toggleClass('time_of_song_up');
   //     $('.progress-bar-pointer').toggleClass('progress-bar-pointer_up');
   //     $('.line_preload').toggleClass('line_preload_up');
-  //   })
+  //   // })
   // })();
 
   // (function() {
@@ -858,9 +865,9 @@ $(document).ready(function() {
   (function() {
     $('.play_btn').on('click', function() {
       $('#play_circle').toggleClass('play-btn').toggleClass('pause-btn');
-      // $('#npAction').text(function(i, text) {
-      //   return text === "PAUSED..." ? "NOW PLAYING" : "PAUSED...";
-      // })
+      $('#npAction').text(function(i, text) {
+        return text === "PAUSED..." ? "NOW PLAYING" : "PAUSED...";
+      })
     })
   })();
 
