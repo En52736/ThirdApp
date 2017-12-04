@@ -69,7 +69,7 @@
   position: absolute;
   z-index: 1;
   top: 50px;
-  left: 70px;
+  left: 65px;
   width: 270px;
   padding-top: 33px;
   -webkit-transition: all .2s ease-in-out;
@@ -148,7 +148,7 @@
   left: 0px;
   right: 0px;
   bottom: -640px;
-  height: 640px;
+  height: 583px;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
@@ -316,9 +316,10 @@ position: absolute;
 	margin: auto;
 	width: 100%;
 	background:url(../img/Zic.png) no-repeat center top;
+	margin-right: 10px;
 	position:relative;             
     left:25%;
-    right: 50%;
+    right: 75%;
     top:80%;
     height:100px;                   
     width:400px;                  
@@ -377,7 +378,7 @@ position: absolute;
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
   border-radius: 50%;
-  background: #fff;
+  background: #E4E4E4;
 }
 .progress-bar-wrapper:hover .progress-bar-pointer {
   top: -3px;
@@ -393,7 +394,7 @@ position: absolute;
   padding-top: 7px;
   -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 0, 0, 1);
 }
 .timeline_wrap.timeline_wrap_up,
 .player_btns .player_btns_up {
