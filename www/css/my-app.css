@@ -68,7 +68,6 @@
 .player_btns {
   position: absolute;
   z-index: 1;
-  margin-right: 50px;
   top: 50px;
   left: 50px;
   width: 270px;
@@ -149,7 +148,8 @@
   left: 0px;
   right: 0px;
   bottom: -640px;
-  height: 550px;
+  height: 100%;
+  width: 100%;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
